@@ -1,4 +1,4 @@
-CONFIG_LOCALVERSION="-Based_on_SkyWalker-レイナ-Reina-HMP"
+CONFIG_LOCALVERSION="-Based_on_SkyWalker-レイナ-Reina-HMP+KSU"
 # CONFIG_LOCALVERSION_AUTO is not set
 # CONFIG_USELIB is not set
 CONFIG_NO_HZ=y
