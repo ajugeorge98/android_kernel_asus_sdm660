@@ -143,6 +143,6 @@ jobs:
     - name: Upload AnyKernel3
       uses: actions/upload-artifact@v3
       with:
-        name: 4.4-KSU-${{ env.VERSION }}-${{ env.DEVICE }}-${{ env.BUILD_TIME }}
+        name: 4.4-KSU-${{ env.VERSION }}-UC-${{ env.DEVICE }}-${{ env.BUILD_TIME }}
         path: kernel_workspace/AnyKernel3/*
 
