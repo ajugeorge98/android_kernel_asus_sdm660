@@ -132,7 +132,7 @@ jobs:
 
     - name: List of Files in Out Folder
       run: |
-        cd $GITHUB_WORKSPACE/kernel_workspace/
+        cd $GITHUB_WORKSPACE/kernel_workspace/android-kernel/out
         ls
 
     - name: Make Anykernel for your kernel
