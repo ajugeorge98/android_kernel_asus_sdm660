@@ -133,6 +133,11 @@ jobs:
     - name: Make Anykernel for your kernel
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace
+        ls
+        cd out
+        ls
+        cd
+        cd $GITHUB_WORKSPACE/kernel_workspace
         git clone https://github.com/ajugeorge98/AnyKernel3 -b 4.4
         sed -i 's/do.devicecheck=1/do.devicecheck=0/g' AnyKernel3/anykernel.sh
         sed -i 's!block=/dev/block/platform/omap/omap_hsmmc.0/by-name/boot;!block=auto;!g' AnyKernel3/anykernel.sh
