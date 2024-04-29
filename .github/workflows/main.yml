@@ -129,14 +129,14 @@ jobs:
         make CC=clang O=out ${{ env.KERNEL_DEFCONFIG }}
         make O=out clean mrproper	CC=clang AR=llvm-ar NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump	READELF=llvm-readelf OBJSIZE=llvm-size STRIP=llvm-strip HOSTCC=clang HOSTCXX=clang++ ${{ env.KERNEL_DEFCONFIG }}
         make O=out CC=clang AR=llvm-ar NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump	READELF=llvm-readelf OBJSIZE=llvm-size STRIP=llvm-strip HOSTCC=clang HOSTCXX=clang++ -j$(nproc --all)
-   
+
+    - name: List of Files in Out Folder
+      run: |
+        cd $GITHUB_WORKSPACE/kernel_workspace/out
+        ls
+
     - name: Make Anykernel for your kernel
       run: |
-        cd $GITHUB_WORKSPACE/kernel_workspace
-        ls
-        cd out
-        ls
-        cd
         cd $GITHUB_WORKSPACE/kernel_workspace
         git clone https://github.com/ajugeorge98/AnyKernel3 -b 4.4
         sed -i 's/do.devicecheck=1/do.devicecheck=0/g' AnyKernel3/anykernel.sh
