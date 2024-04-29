@@ -132,7 +132,7 @@ jobs:
 
     - name: List of Files in Out Folder
       run: |
-        cd $GITHUB_WORKSPACE/kernel_workspace/out
+        cd $GITHUB_WORKSPACE/kernel_workspace/
         ls
 
     - name: Make Anykernel for your kernel
