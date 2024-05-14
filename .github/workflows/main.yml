@@ -12,11 +12,11 @@ on:
       KERNEL_SOURCE_BRANCH:
         description: 'Branch'
         required: true
-        default: 'test'
+        default: 'main'
       KERNEL_DEFCONFIG:
         description: 'Defconfig'
         required: true
-        default: 'kali_defconfig'
+        default: 'X00TD_defconfig'
       KERNEL_FILE:
         description: 'Your kernel out image name'
         required: true
